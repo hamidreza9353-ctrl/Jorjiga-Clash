@@ -1,0 +1,17 @@
+[Unit]
+Description=Jorjiga Clash Node API
+After=network.target
+
+[Service]
+Type=simple
+User=jorjiga
+WorkingDirectory=/var/www/jorjiga-clash/backend
+EnvironmentFile=/var/www/jorjiga-clash/backend/.env
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

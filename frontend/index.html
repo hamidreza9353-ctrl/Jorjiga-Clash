@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b16">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jorjiga Clash | فروش جم، اکانت و کلن بازی">
+<meta property="og:description" content="فروش جم، اکانت و کلن بازی‌های گیمینگ در Jorjiga Clash.">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:site_name" content="Jorjiga Clash">
+<meta name="description" content="Jorjiga Clash؛ فروش جم، اکانت و کلن بازی‌های گیمینگ با امکان ثبت آگهی و پیگیری سفارش.">
+<title>Jorjiga Clash | فروش جم، اکانت و کلن بازی</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#"><img class="logo" src="images/logo.png" alt="Jorjiga Clash"><span>Jorjiga <b>Clash</b></span></a>
+  <nav><a class="ad-btn" href="https://t.me/" target="_blank">➕ ثبت آگهی</a></nav>
+  <div class="user-actions"><a class="account-btn" href="account.html">👤 حساب</a><button class="cart-btn" onclick="openCart()">🛒 سبد <span id="cartCount">0</span></button></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">JORJIGA CLASH</span>
+    <h1>فروشگاه گیمینگ<br><span>سریع و ساده</span></h1>
+    <p>بسته موردنظرت را انتخاب کن، سفارش را ثبت کن و وضعیت آن را آنلاین پیگیری کن.</p>
+    <div class="hero-actions"><a class="primary" href="#packs">مشاهده محصولات</a><a class="primary" href="#accounts">🎮 فروش اکانت</a><a class="primary" href="#clans">🏰 فروش کلن</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="orb">⚡</div>
+    <strong>GAMING<br>ZONE</strong>
+    <small>FAST • SIMPLE • SECURE</small>
+  </div>
+</section>
+
+<section id="packs" class="section">
+  <div class="section-head"><div><span class="eyebrow">STORE</span><h2>محصولات</h2></div><span id="productStatus">در حال دریافت...</span></div>
+  <div id="products" class="grid"></div>
+</section>
+
+<section id="accounts" class="section"><div class="section-head"><div><span class="eyebrow">ACCOUNT MARKET</span><h2>فروش اکانت</h2></div><span>اکانت‌های موجود</span></div><div id="accountsGrid" class="grid"></div><div style="margin-top:30px;text-align:center"><a class="primary" href="https://t.me/" target="_blank">📱 ثبت اکانت برای فروش در تلگرام</a></div></section><section id="clans" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">CLAN MARKET</span><h2>فروش کلن</h2></div>
+    <span>کلن‌های موجود</span>
+  </div>
+  <div class="grid">
+    <article class="product">
+      <div class="gem">🏰</div>
+      <h3>کلن نمونه</h3>
+      <div class="price">Level 10<br>🏆 مشخصات کلن</div>
+      <button>مشاهده جزئیات</button>
+    </article>
+  </div>
+</section>
+<section id="track" class="track section">
+  <div><span class="eyebrow">ORDER TRACKING</span><h2>پیگیری سفارش</h2><p>کد سفارش را وارد کن تا وضعیت آخرین سفارش نمایش داده شود.</p></div>
+  <div class="track-form"><input id="trackId" inputmode="numeric" placeholder="مثلاً 1024"><button onclick="trackOrder()">پیگیری</button></div>
+  <div id="trackResult"></div>
+</section>
+</main>
+
+<footer>© 2026 Jorjiga Clash — این وب‌سایت مستقل است و وابستگی یا تأیید رسمی از طرف Supercell را القا نمی‌کند.</footer>
+
+<div id="cartModal" class="modal" hidden>
+ <div class="modal-box"><button class="close" onclick="document.getElementById('cartModal').style.display='none'">×</button><h2>سبد خرید</h2><div id="cartItems"></div><div class="total">مجموع: <b id="cartTotal">0</b></div>
+ <input id="playerId" placeholder="Player ID"><button class="primary full" onclick="submitOrder()">ثبت سفارش</button><p id="cartMsg"></p></div>
+</div>
+<script src="app.js"></script>
+<div id="accountModal" class="modal" hidden><div class="modal-box account-modal-box"><button class="close" onclick="closeAccount()">×</button><div id="accountDetails"></div></div></div></body>
+</html>

@@ -1,0 +1,769 @@
+[hidden]{display:none!important}
+[hidden]{display:none!important}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070b16;color:#f5f7ff;font-family:Vazirmatn,system-ui,sans-serif}a{color:inherit;text-decoration:none}.nav{height:100px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid #1c2438;background:#080c18ee;backdrop-filter:blur(12px);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:10px;font-weight:800}.brand b{color:#8c7cff}.logo{display:grid;place-items:center;width:46px;height:46px;object-fit:contain;transform:none;border-radius:10px}.nav nav{display:flex;gap:25px;color:#aeb7cc;font-size:14px}.cart-btn,.primary{border:0;border-radius:12px;padding:11px 16px;background:#8c7cff;color:#fff;font-weight:700;cursor:pointer}.cart-btn{background:#151c31}.hero{min-height:570px;padding:90px 8%;display:flex;align-items:center;justify-content:space-between;gap:40px;background:radial-gradient(circle at 75% 35%,#222052 0,#070b16 42%)}.hero-copy{max-width:620px}.eyebrow{font-size:12px;letter-spacing:2px;color:#8c7cff;font-weight:800}.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.05;margin:18px 0}.hero h1 span{color:#6bdcff}.hero p{color:#aeb7cc;line-height:2;margin-bottom:28px}.hero-card{width:280px;height:330px;border:1px solid #303858;border-radius:32px;background:linear-gradient(145deg,#171e39,#0d1223);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 80px #0008;transform:rotate(3deg)}.orb{font-size:70px;margin-bottom:15px}.hero-card strong{font-size:30px;line-height:1.05;text-align:center}.hero-card small{color:#68748f;margin-top:18px}.section{padding:80px 8%;max-width:1250px;margin:auto}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:30px}.section h2{font-size:34px;margin:8px 0}.section-head>span{color:#69758e;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#11182b;border:1px solid #222d49;border-radius:20px;padding:24px;transition:.2s}.product:hover{transform:translateY(-5px);border-color:#6258c9}.gem{font-size:36px}.product h3{margin:14px 0 8px}.price{color:#9da8bd;margin-bottom:20px}.product button{width:100%;border:0;padding:12px;border-radius:10px;background:#202a45;color:#fff;cursor:pointer;font-weight:700}.track{margin-top:30px;border-top:1px solid #1c2438;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.track p{color:#8995ab}.track-form{display:flex;gap:8px}.track-form input,.modal-box input{flex:1;background:#0b1120;border:1px solid #2a3552;color:#fff;padding:13px;border-radius:10px}.track-form button{border:0;border-radius:10px;padding:13px 20px;background:#8c7cff;color:#fff;font-weight:700}.status{background:#11182b;border-radius:12px;padding:15px;margin-top:15px;color:#b8c2d7}footer{text-align:center;padding:30px;color:#59657d;border-top:1px solid #171f32;font-size:12px}.modal{position:fixed;inset:0;background:#000a;display:grid;place-items:center;padding:20px;z-index:10}.modal-box{width:min(520px,100%);background:#10172a;border:1px solid #2b3654;border-radius:20px;padding:25px;position:relative}.close{position:absolute;left:18px;top:15px;background:none;border:0;color:#fff;font-size:25px}.cart-line{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #242e48}.total{padding:20px 0;font-size:18px}.full{width:100%}.modal-box input{width:100%;margin:8px 0}.modal-box p{color:#aab5ca}@media(max-width:800px){.nav{padding:0 4%}.nav nav{display:none}.hero{padding:65px 6%;min-height:auto}.hero-card{display:none}.grid{grid-template-columns:repeat(2,1fr)}.section{padding:60px 6%}.track{grid-template-columns:1fr}}@media(max-width:480px){.grid{grid-template-columns:1fr}.hero h1{font-size:45px}.brand{font-size:14px}}
+
+.account{max-width:600px;margin:70px auto;padding:25px}.account input{display:block;width:100%;margin:10px 0;background:#0b1120;border:1px solid #2a3552;color:#fff;padding:13px;border-radius:10px}.tabs{display:flex;gap:8px;margin:15px 0}.tabs button{background:#1b2540;color:#fff;border:0;border-radius:9px;padding:10px 18px}
+
+.account-card{
+  overflow:hidden;
+  padding:0 0 18px;
+}
+
+.account-card h3,
+.account-card .price{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.account-img{
+  display:block;
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  background:#0b1120;
+}
+
+.account-card button{
+  margin:0 20px;
+  width:calc(100% - 40px);
+}
+
+
+.account-modal-box{
+  max-width:560px;
+  max-height:90vh;
+  overflow-y:auto;
+}
+
+.account-detail-img{
+  display:block;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:22px;
+  background:#0b1120;
+}
+
+.account-modal-box h2{
+  margin:8px 0 20px;
+}
+
+.account-info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:22px;
+}
+
+.account-info div{
+  background:#0b1120;
+  border:1px solid #202b46;
+  border-radius:12px;
+  padding:14px;
+}
+
+.account-info span{
+  display:block;
+  color:#7f8ba5;
+  font-size:12px;
+  margin-bottom:6px;
+}
+
+.account-info b{
+  font-size:14px;
+}
+
+.account-modal-box .full{
+  display:block;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+@media(max-width:480px){
+  .account-detail-img{
+    height:210px;
+  }
+
+  .account-info{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.ad-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:9px 13px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#8c7cff,#6b5ce7);
+  color:#fff !important;
+  font-weight:800;
+  box-shadow:0 5px 18px #6b5ce733;
+  transition:.2s;
+}
+
+.ad-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px #6b5ce755;
+}
+
+
+@media(max-width:800px){
+  .nav{
+    overflow-x:auto;
+  }
+
+  .nav nav{
+    display:flex;
+    gap:10px;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+
+  .nav nav a{
+    flex-shrink:0;
+  }
+}
+
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.hero-actions .primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:145px;
+  text-align:center;
+}
+
+@media(max-width:600px){
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .hero-actions .primary{
+    width:100%;
+  }
+}
+
+
+.ad-btn{
+  position:relative;
+  padding:7px 11px;
+  font-size:12px;
+}
+
+.ad-btn::after{
+  content:"رایگان";
+  position:absolute;
+  top:-9px;
+  right:-12px;
+  background:#22c55e;
+  color:#fff;
+  font-size:9px;
+  font-weight:900;
+  padding:3px 6px;
+  border-radius:8px;
+  box-shadow:0 3px 8px #0005;
+}
+
+
+.ad-btn::after{
+  content:"✦ رایگان";
+  top:-10px;
+  right:auto;
+  left:-10px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#fff;
+  font-size:9px;
+  font-weight:900;
+  padding:4px 8px;
+  border-radius:9px 9px 9px 2px;
+  box-shadow:0 4px 12px #16a34a66;
+  transform:rotate(-4deg);
+}
+
+
+.cart-btn{
+  width:38px;
+  height:38px;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:11px;
+  font-size:17px;
+  background:#11182b;
+  border:1px solid #26314d;
+  color:#dbe3f5;
+  box-shadow:0 4px 14px #0003;
+  transition:.2s ease;
+}
+
+.cart-btn:hover{
+  transform:translateY(-2px);
+  border-color:#6b5ce7;
+  background:#171f38;
+}
+
+
+.account-btn{
+  width:38px;
+  height:38px;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:11px;
+  font-size:17px;
+  background:#11182b;
+  border:1px solid #26314d;
+  color:#dbe3f5;
+  box-shadow:0 4px 14px #0003;
+  transition:.2s ease;
+}
+
+.account-btn:hover{
+  transform:translateY(-2px);
+  border-color:#6b5ce7;
+  background:#171f38;
+}
+
+
+.account-btn,
+.cart-btn{
+  width:auto;
+  height:34px;
+  padding:6px 10px;
+  border-radius:9px;
+  font-size:12px;
+  gap:5px;
+  white-space:nowrap;
+}
+
+.account-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cart-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#cartCount{
+  min-width:16px;
+  height:16px;
+  padding:0 4px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  background:#6b5ce7;
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+}
+
+
+.account-btn,
+.cart-btn{
+  position:relative;
+  height:36px;
+  padding:6px 11px;
+  border:1px solid #354267;
+  border-radius:11px;
+  background:linear-gradient(145deg,#18213a,#0f1628);
+  color:#eef2ff;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:
+    inset 0 1px 0 #ffffff12,
+    0 5px 16px #0005;
+  transition:all .22s ease;
+}
+
+.account-btn:hover,
+.cart-btn:hover{
+  transform:translateY(-2px);
+  border-color:#7569ff;
+  background:linear-gradient(145deg,#20294a,#141c32);
+  box-shadow:
+    0 7px 22px #6b5ce744,
+    inset 0 1px 0 #ffffff18;
+}
+
+.account-btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:11px;
+  background:linear-gradient(120deg,#8c7cff18,transparent 55%);
+  pointer-events:none;
+}
+
+.cart-btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:11px;
+  background:linear-gradient(120deg,#6bdcff18,transparent 55%);
+  pointer-events:none;
+}
+
+#cartCount{
+  min-width:17px;
+  height:17px;
+  padding:0 5px;
+  margin-right:2px;
+  border-radius:9px;
+  background:linear-gradient(135deg,#8c7cff,#5f52d9);
+  border:1px solid #a69eff55;
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  box-shadow:0 3px 9px #6b5ce766;
+}
+
+
+.account-btn,
+.cart-btn{
+  height:31px;
+  padding:5px 8px;
+  border-radius:8px;
+  font-size:11px;
+  gap:4px;
+}
+
+#cartCount{
+  min-width:15px;
+  height:15px;
+  padding:0 4px;
+  font-size:9px;
+  border-radius:8px;
+}
+
+
+.account-btn,
+.cart-btn{
+  height:32px;
+  padding:4px 8px;
+  border-radius:18px;
+  gap:5px;
+}
+
+.account-btn{
+  padding-left:5px;
+}
+
+.account-btn:first-letter,
+.cart-btn:first-letter{
+  display:inline-flex;
+}
+
+
+.user-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+}
+
+.user-actions .account-btn,
+.user-actions .cart-btn{
+  margin:0;
+}
+
+
+.product{
+  position:relative;
+}
+
+.product .gem{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.product 
+
+.product 
+
+@keyframes hangingSoon{
+  0%,100%{transform:translateX(-50%) rotate(-4deg)}
+  50%{transform:translateX(-50%) rotate(4deg)}
+}
+
+
+.product 
+
+.product 
+
+.product .gem{
+  overflow:visible;
+}
+
+.product .gem{
+  --nail-size:7px;
+}
+
+.product .gem{
+  position:relative;
+}
+
+.product .gem span{
+  position:relative;
+}
+
+.product .gem::marker{
+  display:none;
+}
+
+@keyframes hangingSoon{
+  0%,100%{
+    transform:translateX(-50%) rotate(-4deg);
+  }
+  25%{
+    transform:translateX(-50%) rotate(2deg);
+  }
+  50%{
+    transform:translateX(-50%) rotate(5deg);
+  }
+  75%{
+    transform:translateX(-50%) rotate(-1deg);
+  }
+}
+
+
+.gem{
+  position:relative;
+  overflow:visible !important;
+  z-index:2;
+}
+
+
+
+
+
+
+/* NATURAL GREEN INK STAMP */
+#products .gem{
+  position:relative !important;
+  overflow:visible !important;
+}
+
+#products .soon-stamp{
+  position:absolute !important;
+  top:50% !important;
+  left:calc(50% - 42px) !important;
+  transform:translate(-50%,-50%) rotate(-13deg) !important;
+
+  padding:5px 9px !important;
+  color:#42d978 !important;
+  background:rgba(22,163,74,.10) !important;
+  border:2px solid rgba(34,197,94,.72) !important;
+  border-radius:4px 7px 5px 6px !important;
+
+  font-size:10px !important;
+  font-weight:950 !important;
+  letter-spacing:.3px !important;
+  white-space:nowrap !important;
+
+  opacity:.88 !important;
+  mix-blend-mode:screen !important;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(34,197,94,.12),
+    0 1px 3px rgba(22,163,74,.18) !important;
+
+  filter:url("#stampRough") !important;
+  z-index:5 !important;
+}
+
+#products .soon-stamp::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:-3px !important;
+  border:1px dashed rgba(34,197,94,.28) !important;
+  border-radius:3px 6px 4px 5px !important;
+  pointer-events:none !important;
+}
+
+/* NATURAL GREEN INK STAMP - LEFT SIDE */
+#products .gem{
+  position:relative !important;
+  overflow:visible !important;
+}
+
+#products .soon-stamp{
+  position:absolute !important;
+  right:calc(50% + 30px) !important;
+  top:50% !important;
+  transform:translateY(-50%) rotate(-12deg) !important;
+
+  width:74px !important;
+  padding:7px 5px !important;
+
+  color:#22c55e !important;
+  background:rgba(22,163,74,.07) !important;
+
+  border:3px solid rgba(34,197,94,.72) !important;
+  border-radius:48% 42% 46% 40% !important;
+
+  font-size:10px !important;
+  font-weight:950 !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+
+  opacity:.82 !important;
+
+  box-shadow:
+    1px 1px 0 rgba(34,197,94,.18),
+    -1px 2px 0 rgba(34,197,94,.12),
+    inset 0 0 7px rgba(34,197,94,.08) !important;
+
+  z-index:20 !important;
+}
+
+/* نامنظمی طبیعی لبه مهر */
+#products .soon-stamp::before{
+  content:"" !important;
+  position:absolute !important;
+  width:7px !important;
+  height:12px !important;
+  right:8px !important;
+  bottom:-8px !important;
+  background:#22c55e !important;
+  border-radius:45% 55% 60% 35% !important;
+  opacity:.55 !important;
+  transform:rotate(8deg) !important;
+}
+
+/* چکه کوچک جوهر */
+#products .soon-stamp::after{
+  content:"" !important;
+  position:absolute !important;
+  width:3px !important;
+  height:7px !important;
+  left:13px !important;
+  bottom:-7px !important;
+  background:#22c55e !important;
+  border-radius:50% !important;
+  opacity:.5 !important;
+}
+
+/* VINTAGE GREEN POSTAGE STAMP */
+#products .product{
+  position:relative !important;
+  overflow:visible !important;
+}
+
+#products .gem .soon-stamp{
+  position:absolute !important;
+
+  /* گوشه بالا-چپ کارت */
+  top:-10px !important;
+  left:-10px !important;
+
+  right:auto !important;
+
+  width:76px !important;
+  height:48px !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  padding:0 !important;
+
+  transform:rotate(-13deg) !important;
+
+  color:#22a447 !important;
+  background:rgba(22,163,74,.08) !important;
+
+  border:3px solid rgba(34,164,71,.72) !important;
+
+  /* حالت لبه تمبر */
+  border-radius:3px !important;
+
+  font-family:Georgia,serif !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:.5px !important;
+
+  opacity:.78 !important;
+
+  box-shadow:
+    inset 0 0 0 2px rgba(34,164,71,.08),
+    0 2px 5px rgba(0,0,0,.18) !important;
+
+  z-index:100 !important;
+}
+
+/* حاشیه داخلی تمبر */
+#products .gem .soon-stamp::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:4px !important;
+
+  border:1px dashed rgba(34,164,71,.55) !important;
+  border-radius:1px !important;
+
+  pointer-events:none !important;
+}
+
+/* قطره‌های جوهر پایین مهر */
+#products .gem .soon-stamp::after{
+  content:"" !important;
+  position:absolute !important;
+
+  left:18px !important;
+  bottom:-11px !important;
+
+  width:4px !important;
+  height:10px !important;
+
+  background:#22a447 !important;
+  border-radius:50% 50% 60% 60% !important;
+
+  opacity:.55 !important;
+  transform:rotate(7deg) !important;
+}
+
+/* VINTAGE POSTAGE STAMP - POLISHED */
+#products .gem .soon-stamp{
+  right:-10px !important;
+  top:-10px !important;
+  left:auto !important;
+
+  transform:rotate(13deg) !important;
+
+  background:rgba(34,94,55,.10) !important;
+  color:#23743d !important;
+
+  border:3px double rgba(35,116,61,.72) !important;
+  border-radius:2px !important;
+
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:.8px !important;
+
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,.25),
+    0 0 2px rgba(35,116,61,.25) !important;
+
+  box-shadow:
+    inset 0 0 0 2px rgba(35,116,61,.10),
+    inset 0 0 12px rgba(35,116,61,.08),
+    2px 3px 5px rgba(0,0,0,.22) !important;
+
+  opacity:.82 !important;
+}
+
+/* Vintage inner border */
+#products .gem .soon-stamp::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:5px !important;
+  border:1px dashed rgba(35,116,61,.48) !important;
+  border-radius:1px !important;
+  pointer-events:none !important;
+}
+
+/* Remove ink drip */
+#products .gem .soon-stamp::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* SIMPLE SOON LABEL */
+#products .gem{
+  position:relative !important;
+}
+
+#products .soon-text{
+  display:block !important;
+  margin-top:6px !important;
+  color:#22c55e !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  text-align:center !important;
+}
+
+/* PREMIUM SOON BADGE */
+#products .gem{
+  position:relative !important;
+  padding-top:34px !important;
+}
+
+#products .soon-text{
+  position:absolute !important;
+  top:0 !important;
+  left:50% !important;
+  transform:translateX(-50%) !important;
+
+  padding:5px 13px !important;
+
+  background:linear-gradient(135deg,#163d2a,#0d251a) !important;
+  border:1px solid #35c76b !important;
+  border-radius:20px !important;
+
+  color:#6ff39a !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  letter-spacing:.7px !important;
+  white-space:nowrap !important;
+
+  box-shadow:
+    0 5px 15px rgba(22,163,74,.25),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+
+  z-index:10 !important;
+}
+
+#products .soon-text::before{
+  content:"✦" !important;
+  margin-left:5px !important;
+  color:#9affb7 !important;
+}
+
+#products .soon-text::after{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  bottom:-5px !important;
+  width:9px !important;
+  height:9px !important;
+  background:#163d2a !important;
+  border-right:1px solid #35c76b !important;
+  border-bottom:1px solid #35c76b !important;
+  transform:translateX(-50%) rotate(45deg) !important;
+  z-index:-1 !important;
+}
+
+/* MOVE SOON BADGE TO THE OPPOSITE SIDE */
+#products .soon-text{
+  left:auto !important;
+  right:-8px !important;
+  transform:rotate(7deg) !important;
+}
+
+#products .soon-text::after{
+  left:auto !important;
+  right:14px !important;
+  transform:rotate(45deg) !important;
+}

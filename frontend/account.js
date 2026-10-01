@@ -1,0 +1,5 @@
+const API="/api";let mode="login",token=localStorage.getItem("jc_user");
+async function submitAuth(){const r=await fetch(API+(mode==="login"?"/auth/user-login":"/auth/register"),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:username.value,password:password.value})});const d=await r.json();if(!r.ok)return authMsg.textContent=d.error||"خطا";localStorage.setItem("jc_user",d.token);token=d.token;show(d.user)}
+async function show(u){authBox.hidden=true;profile.hidden=false;welcome.textContent="سلام "+u.username+" 👋";const r=await fetch(API+"/user/orders",{headers:{Authorization:"Bearer "+token}});if(!r.ok)return logout();const a=await r.json();myOrders.innerHTML=a.length?a.map(o=>`<div class="status">#${o.id} — ${Number(o.total).toLocaleString()} ${o.currency} — ${o.status}</div>`).join(""):"<p>هنوز سفارشی نداری.</p>"}
+function logout(){localStorage.removeItem("jc_user");location.reload()}
+if(token)fetch(API+"/auth/me",{headers:{Authorization:"Bearer "+token}}).then(r=>r.ok?r.json():null).then(d=>d&&show(d.user));
